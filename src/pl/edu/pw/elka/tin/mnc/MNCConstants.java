@@ -1,7 +1,5 @@
 package pl.edu.pw.elka.tin.mnc;
 
-import java.net.InetAddress;
-
 /**
  * Created by przemek on 16.12.14.
  */
@@ -11,6 +9,7 @@ public interface MNCConstants {
     public static final int UCAST_PORT = 4446;
     public static final int UDP_PACAGE_MAX_SIZE = 1400;
 
+    public static final String LOCAL_LINE_SEPARATOR = System.getProperty("line.separator");
 
     public static final int MNCDATAGRAM_WHO_HAS_TOKEN = 1;
     public static final int MNCDATAGRAM_HAVE_TOKEN = 2;

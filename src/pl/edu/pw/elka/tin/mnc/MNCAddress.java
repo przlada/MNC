@@ -7,7 +7,16 @@ import java.io.Serializable;
  */
 public class MNCAddress implements Serializable, Comparable<MNCAddress>{
     private String address;
-    MNCAddress(String a){
+    private int ControllerType;
+
+    public static final class TYPE{
+        public static final int MONITOR = 1;
+        public static final int CONTROLLER = 2;
+        public static final int CONTROLLER_GROUP = 3;
+    }
+
+    MNCAddress(String a, int t){
+        ControllerType = t;
         address = a;
     }
 
@@ -17,6 +26,10 @@ public class MNCAddress implements Serializable, Comparable<MNCAddress>{
 
     public String toString(){
         return address;
+    }
+
+    public int getControllerType() {
+        return ControllerType;
     }
 
     @Override
